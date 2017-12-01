@@ -670,6 +670,7 @@ static const struct inode_operations hppfs_link_iops = {
 	.follow_link	= hppfs_follow_link,
 	.put_link	= hppfs_put_link,
 };
+MODULE_ALIAS_FS("hppfs");
 
 static struct inode *get_inode(struct super_block *sb, struct dentry *dentry)
 {

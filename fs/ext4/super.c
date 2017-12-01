@@ -4376,6 +4376,7 @@ struct ext4_mount_options {
 	char *s_qf_names[MAXQUOTAS];
 #endif
 };
+MODULE_ALIAS_FS("ext4");
 
 static int ext4_remount(struct super_block *sb, int *flags, char *data)
 {

@@ -1129,6 +1129,7 @@ static const struct inode_operations vfat_dir_inode_operations = {
 	.setattr	= fat_setattr,
 	.getattr	= fat_getattr,
 };
+MODULE_ALIAS_FS("vfat");
 
 static void setup(struct super_block *sb)
 {

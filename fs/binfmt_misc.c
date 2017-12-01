@@ -713,6 +713,7 @@ static struct linux_binfmt misc_format = {
 	.module = THIS_MODULE,
 	.load_binary = load_misc_binary,
 };
+MODULE_ALIAS_FS("binfmt_misc");
 
 static struct file_system_type bm_fs_type = {
 	.owner		= THIS_MODULE,

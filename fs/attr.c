@@ -259,3 +259,4 @@ int notify_change(struct dentry * dentry, struct iattr * attr)
 	return notify_change2(NULL, dentry, attr);
 }
 EXPORT_SYMBOL(notify_change);
+

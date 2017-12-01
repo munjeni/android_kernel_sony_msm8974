@@ -2032,6 +2032,7 @@ static const struct super_operations gadget_fs_operations = {
 	.statfs =	simple_statfs,
 	.drop_inode =	generic_delete_inode,
 };
+MODULE_ALIAS_FS("gadgetfs");
 
 static int
 gadgetfs_fill_super (struct super_block *sb, void *opts, int silent)

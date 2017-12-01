@@ -1906,6 +1906,7 @@ const struct super_operations ubifs_super_operations = {
 	.show_options  = ubifs_show_options,
 	.sync_fs       = ubifs_sync_fs,
 };
+MODULE_ALIAS_FS("ubifs");
 
 /**
  * open_ubi - parse UBI device name string and open the UBI device.

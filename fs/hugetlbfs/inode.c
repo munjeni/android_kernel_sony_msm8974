@@ -762,6 +762,7 @@ static const struct super_operations hugetlbfs_ops = {
 	.put_super	= hugetlbfs_put_super,
 	.show_options	= generic_show_options,
 };
+MODULE_ALIAS_FS("hugetlbfs");
 
 static int
 hugetlbfs_parse_options(char *options, struct hugetlbfs_config *pconfig)

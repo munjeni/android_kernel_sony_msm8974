@@ -429,6 +429,7 @@ static const match_table_t tokens = {
 	{Opt_noreservation, "noreservation"},
 	{Opt_err, NULL}
 };
+MODULE_ALIAS_FS("ext2");
 
 static int parse_options(char *options, struct super_block *sb)
 {

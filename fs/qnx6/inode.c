@@ -516,6 +516,7 @@ static const struct address_space_operations qnx6_aops = {
 	.readpages	= qnx6_readpages,
 	.bmap		= qnx6_bmap
 };
+MODULE_ALIAS_FS("qnx6");
 
 static struct inode *qnx6_private_inode(struct super_block *s,
 					struct qnx6_root_node *p)

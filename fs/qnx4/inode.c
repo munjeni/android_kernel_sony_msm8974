@@ -274,6 +274,7 @@ static const struct address_space_operations qnx4_aops = {
 	.readpage	= qnx4_readpage,
 	.bmap		= qnx4_bmap
 };
+MODULE_ALIAS_FS("qnx4");
 
 struct inode *qnx4_iget(struct super_block *sb, unsigned long ino)
 {

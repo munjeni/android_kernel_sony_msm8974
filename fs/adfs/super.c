@@ -288,6 +288,7 @@ static const struct super_operations adfs_sops = {
 	.remount_fs	= adfs_remount,
 	.show_options	= adfs_show_options,
 };
+MODULE_ALIAS_FS("adfs");
 
 static struct adfs_discmap *adfs_read_map(struct super_block *sb, struct adfs_discrecord *dr)
 {

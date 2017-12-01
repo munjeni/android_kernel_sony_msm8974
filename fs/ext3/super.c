@@ -879,6 +879,7 @@ static const match_table_t tokens = {
 	{Opt_resize, "resize"},
 	{Opt_err, NULL},
 };
+MODULE_ALIAS_FS("ext3");
 
 static ext3_fsblk_t get_sb_block(void **data, struct super_block *sb)
 {

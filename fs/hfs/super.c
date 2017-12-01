@@ -213,6 +213,7 @@ static const match_table_t tokens = {
 	{ opt_iocharset, "iocharset=%s" },
 	{ opt_err, NULL }
 };
+MODULE_ALIAS_FS("hfs");
 
 static inline int match_fourchar(substring_t *arg, u32 *result)
 {

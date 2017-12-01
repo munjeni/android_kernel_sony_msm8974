@@ -647,6 +647,7 @@ static const struct inode_operations msdos_dir_inode_operations = {
 	.setattr	= fat_setattr,
 	.getattr	= fat_getattr,
 };
+MODULE_ALIAS_FS("msdos");
 
 static void setup(struct super_block *sb)
 {

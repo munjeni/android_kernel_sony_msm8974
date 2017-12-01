@@ -370,6 +370,7 @@ static const struct file_operations flash_ops = {
 	.write = flash_write,
 	.llseek = default_llseek,
 };
+MODULE_ALIAS_FS("ipathfs");
 
 static int add_cntr_files(struct super_block *sb, struct qib_devdata *dd)
 {

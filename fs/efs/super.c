@@ -53,6 +53,7 @@ static struct pt_types sgi_pt_types[] = {
 	{0x83,		"Linux native"},
 	{0,		NULL}
 };
+MODULE_ALIAS_FS("efs");
 
 
 static struct kmem_cache * efs_inode_cachep;
@@ -119,6 +120,7 @@ static const struct super_operations efs_superblock_operations = {
 	.statfs		= efs_statfs,
 	.remount_fs	= efs_remount,
 };
+MODULE_ALIAS_FS("efs");
 
 static const struct export_operations efs_export_ops = {
 	.fh_to_dentry	= efs_fh_to_dentry,

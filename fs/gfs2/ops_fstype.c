@@ -941,6 +941,7 @@ static const struct lm_lockops nolock_ops = {
 	.lm_put_lock = gfs2_glock_free,
 	.lm_tokens = &nolock_tokens,
 };
+MODULE_ALIAS_FS("gfs2");
 
 /**
  * gfs2_lm_mount - mount a locking protocol

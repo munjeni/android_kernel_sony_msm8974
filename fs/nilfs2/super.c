@@ -1200,6 +1200,7 @@ struct nilfs_super_data {
 	__u64 cno;
 	int flags;
 };
+MODULE_ALIAS_FS("nilfs2");
 
 /**
  * nilfs_identify - pre-read mount options needed to identify mount instance

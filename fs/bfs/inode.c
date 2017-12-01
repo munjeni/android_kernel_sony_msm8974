@@ -291,6 +291,7 @@ static const struct super_operations bfs_sops = {
 	.put_super	= bfs_put_super,
 	.statfs		= bfs_statfs,
 };
+MODULE_ALIAS_FS("bfs");
 
 void dump_imap(const char *prefix, struct super_block *s)
 {

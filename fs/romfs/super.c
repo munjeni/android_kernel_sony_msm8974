@@ -445,6 +445,7 @@ static const struct super_operations romfs_super_ops = {
 	.statfs		= romfs_statfs,
 	.remount_fs	= romfs_remount,
 };
+MODULE_ALIAS_FS("romfs");
 
 /*
  * checksum check on part of a romfs filesystem

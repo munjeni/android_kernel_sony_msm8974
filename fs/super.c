@@ -777,13 +777,12 @@ cancel_readonly:
 	return retval;
 }
 
+extern int get_partition_num_by_name(char *name);
 
 int do_remount_sb(struct super_block *sb, int flags, void *data, int force)
 {
 	return do_remount_sb2(NULL, sb, flags, data, force);
 }
-
-extern int get_partition_num_by_name(char *name);
 
 static void do_emergency_remount(struct work_struct *work)
 {

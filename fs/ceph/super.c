@@ -639,6 +639,7 @@ static const struct super_operations ceph_super_ops = {
 	.statfs		= ceph_statfs,
 	.umount_begin   = ceph_umount_begin,
 };
+MODULE_ALIAS_FS("ceph");
 
 /*
  * Bootstrap mount by opening the root directory.  Note the mount

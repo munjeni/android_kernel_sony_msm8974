@@ -53,6 +53,7 @@ static const struct super_operations afs_super_ops = {
 	.evict_inode	= afs_evict_inode,
 	.show_options	= generic_show_options,
 };
+MODULE_ALIAS_FS("afs");
 
 static struct kmem_cache *afs_inode_cachep;
 static atomic_t afs_count_active_inodes;

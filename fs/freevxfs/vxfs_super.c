@@ -64,6 +64,7 @@ static const struct super_operations vxfs_super_ops = {
 	.statfs =		vxfs_statfs,
 	.remount_fs =		vxfs_remount,
 };
+MODULE_ALIAS_FS("vxfs"); /* makes mount -t vxfs autoload the module */
 
 /**
  * vxfs_put_super - free superblock resources

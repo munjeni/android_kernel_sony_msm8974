@@ -996,6 +996,7 @@ static const struct export_operations exofs_export_ops = {
 	.fh_to_parent = exofs_fh_to_parent,
 	.get_parent = exofs_get_parent,
 };
+MODULE_ALIAS_FS("exofs");
 
 /******************************************************************************
  * INSMOD/RMMOD

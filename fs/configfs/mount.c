@@ -65,6 +65,7 @@ static struct configfs_dirent configfs_root = {
 	.s_type		= CONFIGFS_ROOT,
 	.s_iattr	= NULL,
 };
+MODULE_ALIAS_FS("configfs");
 
 static int configfs_fill_super(struct super_block *sb, void *data, int silent)
 {

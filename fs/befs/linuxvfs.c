@@ -667,6 +667,7 @@ static const match_table_t befs_tokens = {
 	{Opt_debug, "debug"},
 	{Opt_err, NULL}
 };
+MODULE_ALIAS_FS("befs");
 
 static int
 parse_options(char *options, befs_mount_options * opts)

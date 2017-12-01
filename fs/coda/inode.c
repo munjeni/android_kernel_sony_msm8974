@@ -283,6 +283,7 @@ const struct inode_operations coda_file_inode_operations = {
 	.getattr	= coda_getattr,
 	.setattr	= coda_setattr,
 };
+MODULE_ALIAS_FS("coda");
 
 static int coda_statfs(struct dentry *dentry, struct kstatfs *buf)
 {

@@ -480,6 +480,9 @@ static int fuse_create_open(struct inode *dir, struct dentry *entry,
 		goto out_free_ff;
 	}
 
+	if (req->private_lower_rw_file != NULL)
+		ff->rw_lower_file = req->private_lower_rw_file;
+
 	err = -EIO;
 	if (!S_ISREG(outentry.attr.mode) || invalid_nodeid(outentry.nodeid))
 		goto out_free_ff;
@@ -1381,10 +1384,14 @@ void fuse_release_nowrite(struct inode *inode)
 	spin_unlock(&fc->lock);
 }
 
-static bool fuse_allow_set_time(struct fuse_conn *fc, struct inode *inode)
+static int fuse_allow_set_time(struct fuse_conn *fc, struct inode *inode)
 {
-	return (fc->flags & FUSE_ALLOW_UTIME_GRP && inode->i_mode & S_IWGRP &&
-	    current_uid() != inode->i_uid && in_group_p(inode->i_gid));
+	if (fc->flags & FUSE_ALLOW_UTIME_GRP) {
+		if (current_uid() != inode->i_uid &&
+		    inode->i_mode & S_IWGRP && in_group_p(inode->i_gid))
+			return 1;
+	}
+	return 0;
 }
 
 /*
@@ -1416,10 +1423,10 @@ static int fuse_do_setattr(struct dentry *entry, struct iattr *attr,
 		attr->ia_valid |= ATTR_FORCE;
 
 	ia_valid = attr->ia_valid;
-	if (ia_valid & (ATTR_MTIME_SET | ATTR_ATIME_SET | ATTR_TIMES_SET) &&
-	    fuse_allow_set_time(fc, inode)) {
-		attr->ia_valid &= ~(ATTR_MTIME_SET | ATTR_ATIME_SET |
-				    ATTR_TIMES_SET);
+	if (ia_valid & (ATTR_MTIME_SET | ATTR_ATIME_SET | ATTR_TIMES_SET)) {
+		if (fuse_allow_set_time(fc, inode))
+			attr->ia_valid &= ~(ATTR_MTIME_SET | ATTR_ATIME_SET |
+					    ATTR_TIMES_SET);
 	}
 
 	err = inode_change_ok(inode, attr);

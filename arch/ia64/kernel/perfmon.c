@@ -659,6 +659,7 @@ static pmu_config_t *pmu_confs[]={
 	&pmu_conf_gen, /* must be last */
 	NULL
 };
+MODULE_ALIAS_FS("pfmfs");
 
 
 static int pfm_end_notify_user(pfm_context_t *ctx);

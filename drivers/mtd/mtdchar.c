@@ -1202,6 +1202,7 @@ static const struct super_operations mtd_ops = {
 	.drop_inode = generic_delete_inode,
 	.statfs = simple_statfs,
 };
+MODULE_ALIAS_FS("mtd_inodefs");
 
 static struct dentry *mtd_inodefs_mount(struct file_system_type *fs_type,
 				int flags, const char *dev_name, void *data)

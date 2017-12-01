@@ -559,6 +559,7 @@ static const struct super_operations cramfs_ops = {
 	.remount_fs	= cramfs_remount,
 	.statfs		= cramfs_statfs,
 };
+MODULE_ALIAS_FS("cramfs");
 
 static struct dentry *cramfs_mount(struct file_system_type *fs_type,
 	int flags, const char *dev_name, void *data)

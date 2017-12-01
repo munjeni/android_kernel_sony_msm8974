@@ -822,6 +822,7 @@ static const arg_desc_t error_actions[] = {
 #endif
 	{NULL, 0, 0},
 };
+MODULE_ALIAS_FS("reiserfs");
 
 /* proceed only one option from a list *cur - string containing of mount options
    opts - array of options which are accepted

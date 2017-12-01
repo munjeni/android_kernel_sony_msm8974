@@ -426,6 +426,7 @@ static const struct inode_operations minix_symlink_inode_operations = {
 	.put_link	= page_put_link,
 	.getattr	= minix_getattr,
 };
+MODULE_ALIAS_FS("minix");
 
 void minix_set_inode(struct inode *inode, dev_t rdev)
 {

@@ -2688,6 +2688,7 @@ static const struct super_operations ntfs_sops = {
 	.show_options	= ntfs_show_options,	/* Show mount options in
 						   proc. */
 };
+MODULE_ALIAS_FS("ntfs");
 
 /**
  * ntfs_fill_super - mount an ntfs filesystem

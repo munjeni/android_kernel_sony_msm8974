@@ -771,6 +771,7 @@ static const struct export_operations jfs_export_operations = {
 	.fh_to_parent	= jfs_fh_to_parent,
 	.get_parent	= jfs_get_parent,
 };
+MODULE_ALIAS_FS("jfs");
 
 static struct file_system_type jfs_fs_type = {
 	.owner		= THIS_MODULE,

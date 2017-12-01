@@ -298,6 +298,7 @@ static void (*flavour_setup[])(struct sysv_sb_info *, unsigned *) = {
 	[FSTYPE_V7]	= detected_v7,
 	[FSTYPE_AFS]	= detected_sysv4,
 };
+MODULE_ALIAS_FS("sysv");
 
 static int complete_read_super(struct super_block *sb, int silent, int size)
 {

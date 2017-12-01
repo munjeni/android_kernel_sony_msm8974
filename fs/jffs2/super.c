@@ -259,6 +259,7 @@ static const struct super_operations jffs2_super_operations =
 	.show_options =	jffs2_show_options,
 	.sync_fs =	jffs2_sync_fs,
 };
+MODULE_ALIAS_FS("jffs2");
 
 /*
  * fill in the superblock

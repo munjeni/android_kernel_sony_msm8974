@@ -728,6 +728,7 @@ static struct ecryptfs_cache_info {
 		.size = sizeof(struct ecryptfs_open_req),
 	},
 };
+MODULE_ALIAS_FS("ecryptfs");
 
 static void ecryptfs_free_kmem_caches(void)
 {

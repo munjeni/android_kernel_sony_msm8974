@@ -1460,6 +1460,7 @@ static const struct super_operations xfs_super_operations = {
 	.nr_cached_objects	= xfs_fs_nr_cached_objects,
 	.free_cached_objects	= xfs_fs_free_cached_objects,
 };
+MODULE_ALIAS_FS("xfs");
 
 static struct file_system_type xfs_fs_type = {
 	.owner			= THIS_MODULE,

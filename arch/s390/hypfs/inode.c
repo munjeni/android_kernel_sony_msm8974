@@ -459,6 +459,7 @@ static const struct super_operations hypfs_s_ops = {
 	.evict_inode	= hypfs_evict_inode,
 	.show_options	= hypfs_show_options,
 };
+MODULE_ALIAS_FS("s390_hypfs");
 
 static struct kobject *s390_kobj;
 

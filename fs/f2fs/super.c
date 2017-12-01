@@ -1182,6 +1182,7 @@ static const struct export_operations f2fs_export_ops = {
 	.fh_to_parent = f2fs_fh_to_parent,
 	.get_parent = f2fs_get_parent,
 };
+MODULE_ALIAS_FS("f2fs");
 
 static loff_t max_file_blocks(void)
 {

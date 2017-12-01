@@ -252,6 +252,7 @@ static const struct super_operations debugfs_super_operations = {
 	.show_options	= debugfs_show_options,
 	.evict_inode	= debugfs_evict_inode,
 };
+MODULE_ALIAS_FS("debugfs");
 
 static int debug_fill_super(struct super_block *sb, void *data, int silent)
 {

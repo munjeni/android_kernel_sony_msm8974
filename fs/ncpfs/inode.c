@@ -109,6 +109,7 @@ static const struct super_operations ncp_sops =
 	.remount_fs	= ncp_remount,
 	.show_options	= ncp_show_options,
 };
+MODULE_ALIAS_FS("ncpfs");
 
 /*
  * Fill in the ncpfs-specific information in the inode.

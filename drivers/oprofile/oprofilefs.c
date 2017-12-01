@@ -182,6 +182,7 @@ static const struct file_operations atomic_ro_fops = {
 	.open		= simple_open,
 	.llseek		= default_llseek,
 };
+MODULE_ALIAS_FS("oprofilefs");
 
 
 int oprofilefs_create_ro_atomic(struct super_block *sb, struct dentry *root,

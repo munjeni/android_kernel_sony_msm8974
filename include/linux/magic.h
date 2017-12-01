@@ -50,6 +50,8 @@
 
 #define SDCARDFS_SUPER_MAGIC	0x5dca2df5
 
+#define SDCARDFS_SUPER_MAGIC	0x5dca2df5
+
 #define SMB_SUPER_MAGIC		0x517B
 #define CGROUP_SUPER_MAGIC	0x27e0eb
 

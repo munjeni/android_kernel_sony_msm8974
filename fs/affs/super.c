@@ -169,6 +169,7 @@ static const match_table_t tokens = {
 	{Opt_ignore, "usrquota"},
 	{Opt_err, NULL},
 };
+MODULE_ALIAS_FS("affs");
 
 static int
 parse_options(char *options, uid_t *uid, gid_t *gid, int *mode, int *reserved, s32 *root,

@@ -1464,6 +1464,7 @@ struct isofs_iget5_callback_data {
 	unsigned long block;
 	unsigned long offset;
 };
+MODULE_ALIAS_FS("iso9660");
 
 static int isofs_iget5_test(struct inode *ino, void *data)
 {

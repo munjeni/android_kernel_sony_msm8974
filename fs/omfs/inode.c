@@ -372,6 +372,7 @@ static const match_table_t tokens = {
 	{Opt_fmask, "fmask=%o"},
 	{Opt_err, NULL},
 };
+MODULE_ALIAS_FS("omfs");
 
 static int parse_options(char *options, struct omfs_sb_info *sbi)
 {

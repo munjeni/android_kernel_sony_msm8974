@@ -333,6 +333,7 @@ static const struct super_operations devpts_sops = {
 	.remount_fs	= devpts_remount,
 	.show_options	= devpts_show_options,
 };
+MODULE_ALIAS_FS("devpts");
 
 static void *new_pts_fs_info(void)
 {

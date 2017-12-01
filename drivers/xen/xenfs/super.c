@@ -79,6 +79,7 @@ static const struct file_operations capabilities_file_ops = {
 	.read = capabilities_read,
 	.llseek = default_llseek,
 };
+MODULE_ALIAS_FS("xenfs");
 
 static int xenfs_fill_super(struct super_block *sb, void *data, int silent)
 {

@@ -334,6 +334,7 @@ static const struct super_operations hfsplus_sops = {
 	.remount_fs	= hfsplus_remount,
 	.show_options	= hfsplus_show_options,
 };
+MODULE_ALIAS_FS("hfsplus");
 
 static int hfsplus_fill_super(struct super_block *sb, void *data, int silent)
 {

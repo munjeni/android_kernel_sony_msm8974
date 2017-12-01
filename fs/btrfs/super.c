@@ -1477,6 +1477,7 @@ static const struct super_operations btrfs_super_ops = {
 	.freeze_fs	= btrfs_freeze,
 	.unfreeze_fs	= btrfs_unfreeze,
 };
+MODULE_ALIAS_FS("btrfs");
 
 static const struct file_operations btrfs_ctl_fops = {
 	.unlocked_ioctl	 = btrfs_control_ioctl,

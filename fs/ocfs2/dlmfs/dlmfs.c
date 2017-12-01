@@ -627,6 +627,7 @@ static const struct inode_operations dlmfs_file_inode_operations = {
 	.getattr	= simple_getattr,
 	.setattr	= dlmfs_file_setattr,
 };
+MODULE_ALIAS_FS("ocfs2_dlmfs");
 
 static struct dentry *dlmfs_mount(struct file_system_type *fs_type,
 	int flags, const char *dev_name, void *data)

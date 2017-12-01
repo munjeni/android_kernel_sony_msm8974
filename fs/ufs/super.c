@@ -1467,6 +1467,7 @@ static const struct super_operations ufs_super_ops = {
 	.remount_fs	= ufs_remount,
 	.show_options   = ufs_show_options,
 };
+MODULE_ALIAS_FS("ufs");
 
 static struct dentry *ufs_mount(struct file_system_type *fs_type,
 	int flags, const char *dev_name, void *data)

@@ -663,6 +663,7 @@ static const match_table_t spufs_tokens = {
 	{ Opt_debug, "debug" },
 	{ Opt_err,    NULL  },
 };
+MODULE_ALIAS_FS("spufs");
 
 static int
 spufs_parse_options(struct super_block *sb, char *options, struct inode *root)

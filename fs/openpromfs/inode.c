@@ -385,6 +385,7 @@ static const struct super_operations openprom_sops = {
 	.statfs		= simple_statfs,
 	.remount_fs	= openprom_remount,
 };
+MODULE_ALIAS_FS("openpromfs");
 
 static int openprom_fill_super(struct super_block *s, void *data, int silent)
 {
